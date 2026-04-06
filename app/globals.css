@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Poster vertical scrolling animation */
+@keyframes poster-vertical-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.poster-marquee-track {
+  height: 200%;
+}
+
+.poster-marquee {
+  animation: poster-vertical-scroll 60s linear infinite;
+  will-change: transform;
+}
+
+/* Direction control: Up/Down */
+.poster-marquee-up {
+  animation: poster-vertical-scroll 60s linear infinite;
+  will-change: transform;
+}
+
+.poster-marquee-down {
+  animation: poster-vertical-scroll 60s linear infinite reverse;
+  will-change: transform;
+}
+
+/* Background poster scrolling animation (slow, doesn't disturb reading) */
+@keyframes postersRibbon {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-posters-ribbon { animation: postersRibbon 60s linear infinite; }
+
+/* Reverse poster scrolling animation (for bottom banner) */
+@keyframes postersRibbonReverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.animate-posters-ribbon-reverse { animation: postersRibbonReverse 60s linear infinite; }
+
+/* Very faint noise grid */
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(255,255,255,.6) 1px, transparent 1px);
+  background-size: 16px 16px;
+  opacity: .04;
+}
