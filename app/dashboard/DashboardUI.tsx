@@ -31,6 +31,9 @@ const posters = [
 ];
 const postersLoop = [...posters, ...posters];
 
+// 头像大小常量
+const AVATAR_SIZE = 48;
+
 export default function DashboardUI({ session, user, movieFact, currentTitle }: DashboardUIProps) {
   const router = useRouter();
   const pathname = usePathname();
@@ -100,10 +103,11 @@ export default function DashboardUI({ session, user, movieFact, currentTitle }: 
           <div className="flex flex-col gap-4 p-6 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-4">
               {session.user.image && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
+                <Image
                   src={session.user.image}
                   alt="avatar"
+                  width={AVATAR_SIZE}
+                  height={AVATAR_SIZE}
                   className="h-12 w-12 rounded-full ring-1 ring-white/20"
                 />
               )}
