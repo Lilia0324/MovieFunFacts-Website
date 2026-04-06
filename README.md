@@ -9,6 +9,9 @@ An AI-powered exploration platform for cinema enthusiasts. Discover unique, behi
 ### **1. Secure Authentication**
 <p align="center">
   <img src="./public/login_movie_fun_facts.gif" width="800" alt="Sign In Demo">
+
+  <img width="800" height="741" alt="Screenshot 2026-04-05 at 11 46 45 PM" src="https://github.com/user-attachments/assets/131ae0c3-cd99-4cc3-9568-6442724ed06b" />
+
   <br>
   <em>Integrated with Google OAuth for a seamless and secure login experience.</em>
 </p>
